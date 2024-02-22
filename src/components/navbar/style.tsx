@@ -25,7 +25,7 @@ export const Items = styled.div<ItemsProps>`
   padding: 1rem;
   border-radius: 999px;
   background-color: ${(props) =>
-    props.active.toString() ? "#ffb400" : "#515151"};
+    props.active? "#ffb400" : "#515151"};
   width: 20px;
   height: 20px;
   display: flex;

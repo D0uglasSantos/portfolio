@@ -76,7 +76,7 @@ export const Icon = styled.div`
   align-items: center;
 `;
 
-export const TextIcon = styled.p`
+export const TextIcon = styled.div`
   font-size: 1rem;
   color: #fff;
   display: flex;
