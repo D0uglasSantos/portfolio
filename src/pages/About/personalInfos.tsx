@@ -41,7 +41,7 @@ const InfoItems2 = [
 const downloadFile = () => {
   const link = document.createElement('a');
   link.download = 'cvDouglas.pdf';
-  link.href = '/cv/cvDouglas.pdf';
+  link.href = '/cv/cvDouglas2024.pdf';
   link.click();
 };
 
