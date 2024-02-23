@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   Div1,
   Forms,
@@ -15,6 +14,7 @@ import {
   TextIcon,
   TitleIcon,
 } from "./style";
+import React from "react";
 import { IoIosMailUnread } from "react-icons/io";
 import { FaPhoneSquare } from "react-icons/fa";
 import { IoIosSend } from "react-icons/io";
@@ -27,14 +27,28 @@ import SectionTitle from "../../components/SectionTitle";
 import { Container } from "../../GlobalStyle";
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const isFormValid = () => {
+    if (!name || !email || !message) {
+      toast.error("Fill in all the fields please!");
+      return false;
+    }
+    return true;
+  };
+
+  const handleSubmit = (e: { preventDefault: () => void; target: string | HTMLFormElement; }) => {
     e.preventDefault();
+
+    if (!isFormValid()) {
+      return;
+    }
+
     emailjs
       .sendForm(
         "service_d2yq6fu",
@@ -45,8 +59,10 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          toast.success("Thanks! I'll get back to you as soon as I can!");
         },
         (error) => {
+          toast.error("Sorry, something went wrong!");
           console.log(error.text);
         }
       );
@@ -96,7 +112,10 @@ const Contact = () => {
                 <FaGithub />
               </IconSocial>
             </a>
-            <a href="https://www.linkedin.com/in/douglas-santos-813539234/" target="blank">
+            <a
+              href="https://www.linkedin.com/in/douglas-santos-813539234/"
+              target="blank"
+            >
               <IconSocial>
                 <FaLinkedin />
               </IconSocial>
@@ -121,7 +140,7 @@ const Contact = () => {
             />
           </DivInputs>
           <TextArea
-            placeholder="from_message"
+            placeholder="Your message"
             cols={30}
             rows={10}
             name="message"
@@ -134,4 +153,5 @@ const Contact = () => {
     </Container>
   );
 };
+
 export default Contact;
