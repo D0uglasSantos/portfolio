@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   Div1,
   Forms,
@@ -42,18 +43,20 @@ const Contact = () => {
     return true;
   };
 
-  const handleSubmit = (e: { preventDefault: () => void; target: string | HTMLFormElement; }) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!isFormValid()) {
       return;
     }
 
+    const formElement = e.target as HTMLFormElement; // Aqui fazemos a conversão de tipo
+
     emailjs
       .sendForm(
         "service_d2yq6fu",
         "template_eioxndu",
-        e.target,
+        formElement,
         "XxJFTqpoOwgnFbvEi"
       )
       .then(
@@ -129,14 +132,14 @@ const Contact = () => {
               name="from_name"
               value={name}
               type="text"
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e: { target: { value: any; }; }) => setName(e.target.value)}
             />
             <Inputs
               placeholder="Your email"
               name="from_email"
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e: { target: { value: any; }; }) => setEmail(e.target.value)}
             />
           </DivInputs>
           <TextArea
@@ -145,7 +148,7 @@ const Contact = () => {
             rows={10}
             name="message"
             value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={(e: { target: { value: any; }; }) => setMessage(e.target.value)}
           />
           <Button2 children="Send Message" icon={<IoIosSend />} />
         </Forms>
