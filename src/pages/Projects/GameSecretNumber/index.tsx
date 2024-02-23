@@ -17,7 +17,7 @@ const GameSecretNumber
       />
       <Container>
         <ProjectView
-          src="/src/assets/img/capaProjects/game-secret-number.png"
+          src="/images/capaProjects/game-secret-number.png"
           overview="This is a project I did to study and have fun at the same time. After finishing it, I challenged a lot of people. Hope you like!
           Feel free to check out the Project by visiting the Live Link."
           link="https://game-secret-number-seven.vercel.app/"

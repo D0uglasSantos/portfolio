@@ -16,7 +16,7 @@ const MundoVoceSabia = () => {
       />
       <Container>
         <ProjectView
-          src="/src/assets/img/capaProjects/mundo-voce-sabia.png"
+          src="/images/capaProjects/mundo-voce-sabia.png"
           overview="This is a project I did to study and try to help others too, as it is a blog about curiosities about technology. It was made using react and javascript. Hope you like it!
         Feel free to check out the Project by visiting the Live Link."
           link="https://mundo-voce-sabia.vercel.app"

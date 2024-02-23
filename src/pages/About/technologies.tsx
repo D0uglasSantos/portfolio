@@ -17,24 +17,24 @@ const Cards = ({ logo, name }: PropsTeachnologies) => {
 
 const Tecnologies = () => {
   const technologies = [
-    { logo: "/src/assets/img/technologies/angular.svg", name: "Angular" },
-    { logo: "/src/assets/img/technologies/react.svg", name: "React" },
-    { logo: "/src/assets/img/technologies/nextJs.svg", name: "NextJs" },
-    { logo: "/src/assets/img/technologies/node.svg", name: "Node" },
+    { logo: "/images/technologies/angular.svg", name: "Angular" },
+    { logo: "/images/technologies/react.svg", name: "React" },
+    { logo: "/images/technologies/nextJs.svg", name: "NextJs" },
+    { logo: "/images/technologies/node.svg", name: "Node" },
     {
-      logo: "/src/assets/img/technologies/tailwindcss.svg",
+      logo: "/images/technologies/tailwindcss.svg",
       name: "Tailwindcss",
     },
     {
-      logo: "/src/assets/img/technologies/css.svg",
+      logo: "/images/technologies/css.svg",
       name: "CSS3",
     },
-    { logo: "/src/assets/img/technologies/javascript.svg", name: "Javascript" },
-    { logo: "/src/assets/img/technologies/typescript.svg", name: "TypeScript" },
-    { logo: "/src/assets/img/technologies/git.svg", name: "Git" },
-    { logo: "/src/assets/img/technologies/figma.svg", name: "Figma" },
-    { logo: "/src/assets/img/technologies/wordpress.svg", name: "Wordpress" },
-    { logo: "/src/assets/img/technologies/plone.svg", name: "Plone" },
+    { logo: "/images/technologies/javascript.svg", name: "Javascript" },
+    { logo: "/images/technologies/typescript.svg", name: "TypeScript" },
+    { logo: "/images/technologies/git.svg", name: "Git" },
+    { logo: "/images/technologies/figma.svg", name: "Figma" },
+    { logo: "/images/technologies/wordpress.svg", name: "Wordpress" },
+    { logo: "/images/technologies/plone.svg", name: "Plone" },
   ];
 
   return (

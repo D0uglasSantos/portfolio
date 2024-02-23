@@ -30,7 +30,7 @@ const Apresentation = () => {
         </Link>
       </DivTexts>
       <Imagem
-        src="/src/assets/img/logoDouglas/logo-ds.svg"
+        src="/images/logoDouglas/logo-ds.svg"
         alt="Imagem Douglas"
       />
     </SectionApresentation>
