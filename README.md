@@ -4,7 +4,7 @@
 
 > Olá, esté é meu Portfolio!! Aqui falo um pouco sobre mim e meus projetos. Entre Em contato para mais informações.
 > 
-<h4 align="center"><a href="https://douglas-santos-portfolio.netlify.app/" target="_blank">Clique para visitar o projeto</a></h4>
+<h4 align="center"><a href="https://douglas-santos-portfolio.netlify.app/" target="blank">Clique para visitar o projeto</a></h4>
 
 ## 💼 Tecnologias utilizadas
 
