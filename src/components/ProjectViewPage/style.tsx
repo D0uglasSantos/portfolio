@@ -18,9 +18,8 @@ export const ProjectOverview = styled.div`
   margin: 2rem 0;
 
   @media screen and (max-width: 580) {
-    align-items: left;
-    display: flex;
-    text-align: left;
+    width: 10%;
+    text-align: center;
   }
 `;
 
@@ -43,6 +42,7 @@ export const Text = styled.p`
 
   @media screen and (max-width: 500px) {
     width: 100%;
+    text-align: center;
   }
 `;
 
@@ -51,12 +51,11 @@ export const DivTools = styled.div`
   display: flex;
   gap: 1rem;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 780px) {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    padding-left: 5%;
+    justify-content: center;
     gap: 1rem;
   }
 `;
@@ -64,15 +63,17 @@ export const DivTools = styled.div`
 export const ToolsUsed = styled.div`
   align-items: center;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 
-  @media screen and (max-width: 580) {
-    align-items: left;
-    display: flex;
-    justify-content: start;
-    text-align: left;
+  @media screen and (max-width: 780) {
+    align-items: center;
+    display: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
   }
 `;
 
@@ -83,6 +84,12 @@ export const SeeLive = styled.div`
   gap: 2rem;
   justify-content: flex-start;
   margin: 2rem 0;
+
+  @media screen and (max-width: 780px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const DivButtons = styled.div`
@@ -90,12 +97,11 @@ export const DivButtons = styled.div`
   gap: 1rem;
   justify-content: center;
 
-  @media screen and (max-width: 400px) {
-    align-items: center;
+  @media screen and (max-width: 780px) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    padding-left: 5%;
+    align-items: center;
+    justify-content: center;
   }
 `;
 

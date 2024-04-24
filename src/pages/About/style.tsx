@@ -13,6 +13,8 @@ export const MainPersonalInfos = styled.section`
 
   @media screen and (max-width: 400px) {
     width: 100%;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
   }
 `;
 
@@ -40,8 +42,8 @@ export const InnerInfoSection1 = styled.div`
   @media screen and (max-width: 560px) {
     width: 90%;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
   }
 `;
 
@@ -55,11 +57,11 @@ export const InnerInfoSection2 = styled.div`
     50% - 1rem
   ); /* Define a largura máxima para 50% - 1rem de espaço entre os elementos */
 
-  @media screen and (max-width: 480) {
+  @media screen and (max-width: 480px) {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-basis: 1;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    flex-basis: 100%; /* Ajusta a base para ocupar toda a largura disponível */
   }
 `;
 
@@ -85,6 +87,7 @@ export const FlexContainer = styled.div`
     flex-direction: row;
     gap: 1rem;
     margin: 1rem 0;
+    justify-content: center; /* Centraliza horizontalmente */
   }
 `;
 
@@ -102,6 +105,7 @@ export const DivItemsInfo = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
+    align-items: center; /* Centraliza os itens horizontalmente */
   }
 `;
 
@@ -142,7 +146,7 @@ export const ContainerTechnologies = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 80%;
   gap: 1.5rem;
   margin-top: 2rem;
@@ -160,7 +164,7 @@ export const ContainerTechnologies = styled.div`
 
 // My Experiences and Educations
 
-export const DivExepriencesEducations = styled.div`
+export const DivExperiencesEducations = styled.div`
   display: flex;
   gap: 5rem;
   justify-content: space-around;

@@ -64,20 +64,16 @@ export const TitleApresentation = styled.h1`
 `;
 
 export const TextApresentation = styled.p`
-  color: ${(props) => props.color};
-  font-size: 1.1rem;
-  font-weight: 400px;
-  flex-wrap: wrap;
+  color: white;
   text-align: center;
-  line-height: 1.8rem;
-  padding: 1.5rem 0;
+  line-height: 3rem;
 `;
 
 export const Imagem = styled.img`
   width: 25%;
-  animation: ${Bounce} 3s infinite;   
+  animation: ${Bounce} 3s infinite;
 
   @media screen and (max-width: 850px) {
-    display:none /* Adjust width for smaller screens */
+    display: none; /* Adjust width for smaller screens */
   }
 `;

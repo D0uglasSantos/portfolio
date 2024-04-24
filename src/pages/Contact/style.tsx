@@ -37,6 +37,10 @@ export const Div1 = styled.div`
     width: 70%;
     text-align: left;
   }
+
+  @media screen and (max-width: 360px){
+    width: 100%;
+  }
 `;
 
 export const Forms = styled.form`
