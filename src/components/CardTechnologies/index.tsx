@@ -1,4 +1,4 @@
-import { Blob, Card, ContainerCard } from "./style";
+import { Card, ContainerCard } from "./style";
 
 interface TechnologiesProps {
   logo: string;

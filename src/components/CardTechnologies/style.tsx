@@ -67,7 +67,7 @@ export const Card = styled.div`
   }
 `;
 
-export const Blob = styled.div`
+/*export const Blob = styled.div`
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -79,7 +79,7 @@ export const Blob = styled.div`
   opacity: 1;
   filter: blur(12px);
   animation: ${BlobBounce} 8s infinite ease;
-`;
+`;*/
 
 export const P = styled.h2`
   color: #fff;
