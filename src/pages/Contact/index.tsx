@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   Div1,
   Forms,
@@ -15,33 +14,27 @@ import {
   TextIcon,
   TitleIcon,
 } from "./style";
-import React, { useState } from "react";
-import { IoIosMailUnread, IoIosSend } from "react-icons/io";
-import { FaPhoneSquare, FaGithub, FaLinkedin } from "react-icons/fa";
+import React from "react";
+import { IoIosMailUnread } from "react-icons/io";
+import { FaPhoneSquare } from "react-icons/fa";
+import { IoIosSend } from "react-icons/io";
 import { AiFillInstagram } from "react-icons/ai";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
 import Title from "../../components/Title";
 import Button2 from "../../components/Button2";
 import SectionTitle from "../../components/SectionTitle";
 import { Container } from "../../GlobalStyle";
+import { useState } from "react";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const updateField = (field: string, value: string) => {
-    setFormData({
-      ...formData,
-      [field]: value,
-    });
-  };
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const isFormValid = () => {
-    const { name, email, message } = formData;
     if (!name || !email || !message) {
       toast.error("Fill in all the fields please!");
       return false;
@@ -56,7 +49,7 @@ const Contact = () => {
       return;
     }
 
-    const formElement = e.currentTarget;
+    const formElement = e.target as HTMLFormElement; // Aqui fazemos a conversão de tipo
 
     emailjs
       .sendForm(
@@ -76,7 +69,9 @@ const Contact = () => {
         }
       );
 
-    setFormData({ name: "", email: "", message: "" });
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
@@ -134,16 +129,20 @@ const Contact = () => {
             <Inputs
               placeholder="Your name"
               name="from_name"
-              value={formData.name}
+              value={name}
               type="text"
-              onChange={(e) => updateField("name", e.target.value)}
+              onChange={(e: { target: { value: any } }) =>
+                setName(e.target.value)
+              }
             />
             <Inputs
               placeholder="Your email"
               name="from_email"
               type="email"
-              value={formData.email}
-              onChange={(e) => updateField("email", e.target.value)}
+              value={email}
+              onChange={(e: { target: { value: any } }) =>
+                setEmail(e.target.value)
+              }
             />
           </DivInputs>
           <TextArea
@@ -151,8 +150,10 @@ const Contact = () => {
             cols={30}
             rows={10}
             name="message"
-            value={formData.message}
-            onChange={(e) => updateField("message", e.target.value)}
+            value={message}
+            onChange={(e: { target: { value: any } }) =>
+              setMessage(e.target.value)
+            }
           />
           <Button2 children="Send Message" icon={<IoIosSend />} />
         </Forms>
