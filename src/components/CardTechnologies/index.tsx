@@ -1,18 +1,15 @@
-import { Blob, Card, ContainerCard, P } from "./style";
+import { Blob, Card, ContainerCard } from "./style";
 
 interface TechnologiesProps {
-  technologies: string;
   logo: string;
 }
 
-const CardTechnologies = ({ technologies, logo }: TechnologiesProps) => {
+const CardTechnologies = ({ logo }: TechnologiesProps) => {
   return (
     <ContainerCard>
       <Card>
-        <P>{technologies}</P>
-        <img src={logo} />
+        <img src={logo} alt="Logo" />
       </Card>
-      <Blob />
     </ContainerCard>
   );
 };

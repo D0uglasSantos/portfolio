@@ -34,18 +34,9 @@ export const ContainerCard = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media screen and (max-width: 800px) {
-    width: 9.6rem;
-    height: 8rem;
-  }
-
   @media screen and (max-width: 500px) {
     width: 9.6rem;
     height: 8rem;
-  }
-  @media screen and (max-width: 480px) {
-    width: 7.6rem;
-    height: 6rem;
   }
 `;
 
@@ -67,25 +58,11 @@ export const Card = styled.div`
   justify-content: space-around;
 
   @media screen and (max-width: 800px) {
-    width: 11rem;
-    height: 10rem;
+    width: 9rem;
+    height: 7.3rem;
     img {
       width: 4rem;
       height: 4rem;
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    width: 9rem;
-    height: 7.3rem;
-  }
-
-  @media screen and (max-width: 480px) {
-    width: 7rem;
-    height: 5.3rem;
-    img {
-      width: 3rem;
-      height: 3rem;
     }
   }
 `;
@@ -110,9 +87,4 @@ export const P = styled.h2`
   font-size: 1.2rem;
   font-weight: 100;
   font-family: "Poppins", sans-serif;
-
-  @media screen and (max-width: 480px) {
-    letter-spacing: 1.5px;
-    font-size: 1rem;
-  }
 `;

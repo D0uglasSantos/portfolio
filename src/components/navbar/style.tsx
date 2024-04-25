@@ -14,6 +14,7 @@ export const Nav = styled.header`
   margin-left: 1rem;
   width: 15%;
   position: fixed;
+  z-index: 999;
 
   @media screen and (max-width: 600px) {
     display: none;
@@ -24,8 +25,7 @@ export const Items = styled.div<ItemsProps>`
   position: relative;
   padding: 1rem;
   border-radius: 999px;
-  background-color: ${(props) =>
-    props.active? "#ffb400" : "#515151"};
+  background-color: ${(props) => (props.active ? "#ffb400" : "#515151")};
   width: 20px;
   height: 20px;
   display: flex;

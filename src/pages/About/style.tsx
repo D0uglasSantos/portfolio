@@ -5,7 +5,8 @@ export const MainPersonalInfos = styled.section`
   display: flex;
   justify-content: center;
   margin: 1rem 0;
-  width: 90%;
+  width: 100%;
+  overflow-x: hidden;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -117,7 +118,7 @@ export const Label = styled.p`
 
   @media screen and (max-width: 386px) {
     font-size: 0.8rem;
-    width:max-content;
+    width: max-content;
   }
 `;
 
@@ -140,6 +141,7 @@ export const InnerPagesContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  overflow-x: hidden;
 `;
 
 export const ContainerTechnologies = styled.div`
@@ -147,9 +149,10 @@ export const ContainerTechnologies = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   gap: 1.5rem;
   margin-top: 2rem;
+  overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
 
   @media screen and (max-width: 800px) {
     width: 90%;

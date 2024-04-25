@@ -1,5 +1,6 @@
 import CardTechnologies from "../../components/CardTechnologies";
 import SectionTitle from "../../components/SectionTitle";
+import Slider from "react-infinite-logo-slider";
 import {
   InnerPagesContainer,
   ContainerTechnologies,
@@ -8,28 +9,27 @@ import {
 
 interface TechnologyProps {
   logo: string;
-  name: string;
 }
 
-const TechnologyCard = ({ logo, name }: TechnologyProps) => (
-  <CardTechnologies logo={logo} technologies={name} />
+const TechnologyCard = ({ logo }: TechnologyProps) => (
+  <CardTechnologies logo={logo} />
 );
 
 const Technologies = () => {
   const technologies = [
-    { logo: "/images/technologies/nextJs.svg", name: "NextJs" },
-    { logo: "/images/technologies/angular.svg", name: "Angular" },
-    { logo: "/images/technologies/react.svg", name: "React" },
-    { logo: "/images/technologies/tailwindcss.svg", name: "Tailwindcss" },
-    { logo: "/images/technologies/css.svg", name: "CSS3" },
-    { logo: "/images/technologies/javascript.svg", name: "Javascript" },
-    { logo: "/images/technologies/typescript.svg", name: "TypeScript" },
-    { logo: "/images/technologies/node.svg", name: "Node" },
-    { logo: "/images/technologies/git.svg", name: "Git" },
-    { logo: "/images/technologies/mysql.svg", name: "MySQL" },
-    { logo: "/images/technologies/figma.svg", name: "Figma" },
-    { logo: "/images/technologies/wordpress.svg", name: "Wordpress" },
-    { logo: "/images/technologies/plone.svg", name: "Plone" },
+    { logo: "/images/technologies/nextJs.svg" },
+    { logo: "/images/technologies/angular.svg" },
+    { logo: "/images/technologies/react.svg" },
+    { logo: "/images/technologies/tailwindcss.svg" },
+    { logo: "/images/technologies/css.svg" },
+    { logo: "/images/technologies/javascript.svg" },
+    { logo: "/images/technologies/typescript.svg" },
+    { logo: "/images/technologies/node.svg" },
+    { logo: "/images/technologies/git.svg" },
+    { logo: "/images/technologies/mysql.svg" },
+    { logo: "/images/technologies/figma.svg" },
+    { logo: "/images/technologies/wordpress.svg" },
+    { logo: "/images/technologies/plone.svg" },
   ];
 
   return (
@@ -37,9 +37,15 @@ const Technologies = () => {
       <InnerPagesContainer>
         <SectionTitle>My Technologies</SectionTitle>
         <ContainerTechnologies>
-          {technologies.map((tech, index) => (
-            <TechnologyCard key={index} {...tech} />
-          ))}
+          <Slider
+            duration={30}
+          >
+            {technologies.map((tech, index) => (
+              <Slider.Slide>
+                <TechnologyCard key={index} {...tech} />
+              </Slider.Slide>
+            ))}
+          </Slider>
         </ContainerTechnologies>
       </InnerPagesContainer>
     </MainPersonalInfos>
