@@ -28,7 +28,7 @@ const InfoItem = ({ itemlabel, info }: InfoProps) => (
 const InfoItems1 = [
   { itemlabel: "First Name:", info: "Douglas" },
   { itemlabel: "Last Name:", info: "Santos" },
-  { itemlabel: "Age:", info: "20 Years" },
+  { itemlabel: "Age:", info: "21 Years" },
   { itemlabel: "Nationality:", info: "Brazilian" },
 ];
 const InfoItems2 = [
@@ -40,8 +40,8 @@ const InfoItems2 = [
 
 const downloadFile = () => {
   const link = document.createElement("a");
-  link.download = "cvDouglas.pdf";
-  link.href = "/cv/cvDouglas2024.pdf";
+  link.download = "Currículo Douglas - 2024.pdf";
+  link.href = "/cv/cv-douglas-2024.pdf";
   link.click();
 };
 
